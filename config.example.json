@@ -1,0 +1,38 @@
+{
+  "tenant_id": "YOUR_TENANT_ID",
+  "client_id": "YOUR_CLIENT_ID",
+  "client_secret": "YOUR_CLIENT_SECRET",
+  "graph": {
+    "authority_host": "https://login.microsoftonline.com",
+    "scope": ["https://graph.microsoft.com/.default"],
+    "base_url": "https://graph.microsoft.com/v1.0"
+  },
+  "sharepoint": {
+    "site_hostname": "contoso.sharepoint.com",
+    "site_path": "/sites/YourSite",
+    "drive_name": "Documents",
+    "folder_path": ""
+  },
+  "azure_openai": {
+    "endpoint": "https://YOUR-RESOURCE-NAME.openai.azure.com/",
+    "api_key": "<AZURE_OPENAI_API_KEY>",
+    "deployment": "gpt-4o-mini",
+    "api_version": "2024-08-01-preview",
+    "max_chars_per_chunk": 12000
+  },
+  "azure_devops": {
+    "organization": "https://dev.azure.com/your-org",
+    "project": "YourProject",
+    "pat": "<PERSONAL_ACCESS_TOKEN>",
+    "area_path": "YourProject\\Area",
+    "iteration_path": "YourProject\\Iteration",
+    "work_item_type": "User Story",
+    "api_version": "7.1-preview.3"
+  },
+  "prompts": {
+    "summarize": {
+      "system": "You are an expert technical analyst helping convert a document into a user story. Always produce accurate, concise Markdown and a compelling agile title.",
+      "user": "From the provided document content produce: 1) An optimal agile User Story title (concise, action-oriented, <= 12 words) starting with a verb where appropriate. 2) A Markdown body that includes: a short overview paragraph, sections for Objectives, Outcomes/Decisions, Risks, Action Items, and 3-5 Key Takeaways as bullet points. Limit the body to <= 250 words. Return output in this exact format:\n\nTITLE: <title line>\n---\n<markdown body>\n\nBase your work ONLY on the content:"
+    }
+  }
+}
