@@ -42,7 +42,7 @@ This guide explains how to grant a specific SharePoint Online site to an applica
 3. Copy the value of `"id"` from the response.  
    Example:
    ```
-   contoso.sharepoint.com,44aab5b0-ab16-4e27-9a12-78ed7cd42eb5,916fe481-b8fa-4505-861a-8af938e03d97
+   contoso.sharepoint.com,44aab5b0-ab16-5w33-9a12-78ed7cd42eb5,916fe481-d5ga-4505-434d-8af938e04egf
    ```
 
 ---
@@ -115,4 +115,5 @@ This guide explains how to grant a specific SharePoint Online site to an applica
   ```
   DELETE /sites/{siteId}/permissions/{permissionId}
   ```
+
 - For automation, use app-only tokens with client credentials (Postman, Insomnia, or scripts).
